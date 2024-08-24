@@ -5,18 +5,19 @@ fint = int(FLAG.hex(),16)
 key = [random.getrandbits(4) for _ in range(3)]
 
 pk = [
-  [11,14,17,20], [12,15,18,21], [13,16,19,22]
+    [11,14,17,20], [12,15,18,21], [13,16,19,22]
 ]
 
 result = [sum([key[j]*pk[i][j] for j in range(3)]) 
 for i in range(3)]
+
 var = ['a','b','c','d']
 for i in range(len(pk)):
-  equation = ''
-  for j in range(len(pk[i])):
-    equation += str(pk[i][j])+"*"+var[j]+" + "
-  equation = equation[:-3] + " = " + str(result[i])
-  print(equation)
+    equation = ''
+    for j in range(len(pk[i])):
+        equation += str(pk[i][j])+"*"+var[j]+" + "
+    equation = equation[:-3] + " = " + str(result[i])
+    print(equation)
   
 key = sum(key)
 
