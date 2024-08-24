@@ -1,5 +1,3 @@
-#nc 152.42.176.161 30041
-
 def rsa_decrypt(ciphertext, d, n):
     # RSA decryption: m = c^d % n
     plaintext = pow(ciphertext, d, n)
@@ -41,5 +39,3 @@ for i, flag in enumerate(flags, start=1):
     decrypted_value = rsa_decrypt(flag, d, n)
     ascii_value = int_to_ascii(decrypted_value)
     print(ascii_value, end='')
-    
-# 0byteCTF{Congratz!___Th3_M0st_B4s1c_RSA_1s_s0_34sy_Right?}
