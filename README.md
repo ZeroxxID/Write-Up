@@ -9,7 +9,8 @@ Resources:
  - <a href="https://wiki.python.org/moin/BeginnersGuide/Download">Downloading Python</a><br>
 
 > Explanation Source Code: <br>
-> Pada source code yang diberikan dapat dilihat variabel `ords` merupakan variabel yang berisikan value dalam bentuk array, jika diperhatikan itu bukan sembarang angka melainkan merupakan angka desimal. <br><br>
+> Pada source code yang diberikan dapat dilihat variabel `ords` merupakan variabel yang berisikan value dalam bentuk array, jika diperhatikan itu bukan sembarang angka melainkan merupakan angka desimal.
+> <br>
 > Kita lanjut lihat baris paling terakhir `print("".join(chr(o ^ 0x32) for o in ords))`. Disini akan dijabarkan sejelas mungkin:
 > - `print()` digunakan untuk menampilkan output `argument` dari `expression` yang terdapat didalam fungsi `print()`. Apa bedanya `argument`, `expresion`, dan `generator expression`? Oke, jadi untuk `generator expression` contoh disini `(chr(o ^ 0x32) for o in ords)`, `expresion` merupakan keseluruhan isi dalam fungsi `print()`contoh disini `"".join(chr(o ^ 0x32) for o in ords)`, kemudian hasil dari `expresion` tersebut disebut sebagai `argument` contoh disini  `"crypto{z3n_0f_pyth0n}"`.
 > - `"".join()` berfungsi untuk menggabungkan dan menggubah elemen-elemen dari suatu iterable (seperti list, tuple, atau generator) menjadi satu string. Nantinya setiap karakter tersebut bakal disisipkan `""` hasilnya `crypto{z3n_0f_pyth0n}`, contoh lain `".".join()` maka hasilnya `c.r.y.p.t.o.{.z.3.n._.0.f._.p.y.t.h.0.n.}`.
