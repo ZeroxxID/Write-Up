@@ -19,9 +19,5 @@ d = inverse(e, phi_n)
 # Dekripsi nilai res untuk mendapatkan hr
 hr = pow(res, d, n)
 
-# Lakukan XOR antara hr dan flag
-decrypted_flag = hr ^ flag
-
-# Konversi hasil XOR ke teks (jika bisa)
-result_text = decrypted_flag.to_bytes((decrypted_flag.bit_length() + 7) // 8, 'big').decode('utf-8')
-print("Flag:", result_text)
+# Lakukan XOR antara hr dan flag dan melakukan output decode
+print(long_to_bytes(hr ^ flag).decode())
