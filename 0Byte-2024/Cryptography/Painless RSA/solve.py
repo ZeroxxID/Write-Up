@@ -1,15 +1,9 @@
+from Crypto.Util.number import *
+
 def rsa_decrypt(ciphertext, d, n):
     # RSA decryption: m = c^d % n
     plaintext = pow(ciphertext, d, n)
     return plaintext
-
-def int_to_ascii(value):
-    # Mengubah integer ke ASCII jika memungkinkan
-    result = ""
-    while value > 0:
-        result = chr(value % 256) + result
-        value //= 256
-    return result
 
 # Given RSA private key (d) and modulus (n)
 d = 3398532790434950753
@@ -34,8 +28,7 @@ flags = [
     5296891837614609202
 ]
 
-# Decrypt each flag and convert to ASCII
-for i, flag in enumerate(flags, start=1):
-    decrypted_value = rsa_decrypt(flag, d, n)
-    ascii_value = int_to_ascii(decrypted_value)
-    print(ascii_value, end='')
+# Looping decode 
+for i in flags:
+    decode = rsa_decrypt(i,d,n)
+    print(long_to_bytes(decode).decode(),end='')
