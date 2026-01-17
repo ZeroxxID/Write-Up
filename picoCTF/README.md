@@ -2,8 +2,16 @@
 ## Table of Contents
 <table>
     <tr>
-        <td>Category</td>
-        <td>Destination</td>
+        <td>
+            <center>
+            <strong>Category</strong>
+            </center>
+        </td>
+        <td>
+            <center>
+            <strong>Destination</strong>
+            </center>
+        </td>
     </tr>
     <tr>
         <td>Binary Exploitation</td>
